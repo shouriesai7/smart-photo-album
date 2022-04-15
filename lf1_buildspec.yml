@@ -8,4 +8,4 @@ phases:
 artifacts:
   type: zip
   files:
-    - Index_Photos.py
+    - index-photos.py

@@ -1,0 +1,11 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+        python: 3.6
+  build:
+    commands:
+artifacts:
+  type: zip
+  files:
+    - lambda_function.py

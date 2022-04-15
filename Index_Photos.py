@@ -54,7 +54,7 @@ def lambda_handler(event, context):
         response = rekognition.detect_labels(Image = image)
         labels = list(map(lambda x : x['Name'], response['Labels']))
         timestamp = datetime.now().strftime('%Y-%d-%mT%H:%M:%S')
-
+        print("new time:", int(time.time()))
         esObject = json.dumps({
             'objectKey' : objectKey,
             'bucket' : bucket,

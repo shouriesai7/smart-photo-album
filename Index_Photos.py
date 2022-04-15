@@ -12,7 +12,7 @@ logger.setLevel(logging.DEBUG)
 
 headers = { "Content-Type": "application/json" }
 host = 'search-photos-twu34m6xdkbq5z3ua6ss4ujtye.us-west-2.es.amazonaws.com'
-
+#testing
 #Setting values to be referenced later in the program
 port = 443
 ssl = True

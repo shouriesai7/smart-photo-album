@@ -8,4 +8,4 @@ phases:
 artifacts:
   type: zip
   files:
-    - lambda_function.py
+    - Index_Photos.py

@@ -6,6 +6,5 @@ phases:
   build:
     commands:
 artifacts:
-  type: zip
   files:
     - ./Frontend

@@ -5,9 +5,6 @@ phases:
         python: 3.7
   build:
     commands:
-artifacts:
-  type: zip
-  files:
-    - Frontend/FrontEndUI.png
-    - Frontend/index.css
-    - Frontend/index.html    
+  post_build:
+    commands:
+      - aws s3 sync Frontend/ s3://buildfrontendbuild/   

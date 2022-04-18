@@ -5,6 +5,7 @@ phases:
         python: 3.7
   build:
     commands:
-  post_build:
-    commands:
-      - aws s3 sync Frontend/ s3://buildfrontendbuild/
+  artifacts:
+  files:
+    - './**/*'
+  base-directory: Frontend

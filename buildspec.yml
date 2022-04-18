@@ -1,17 +1,15 @@
 version: 0.2
+
 phases:
-  install:
-    runtime-versions:
-        python: 3.7
   build:
     commands:
       - mkdir build-output
-      - cp -R Frontend/ build-output
+      - cp -R Frontend/
   post_build:
     commands:
       - mv build-output/**/* ./
       - mv build-output/* ./
-      - rm -R build-output
+      - rm -R build-output *.yml LICENSE README* .git*
 artifacts:
   files:
     - '**/*'

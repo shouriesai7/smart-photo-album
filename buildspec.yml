@@ -7,4 +7,4 @@ phases:
     commands:
   post_build:
     commands:
-      - aws s3 sync Frontend/ s3://buildfrontendbuild/   
+      - aws s3 sync Frontend/ s3://buildfrontendbuild/

@@ -7,4 +7,5 @@ phases:
     commands:
 artifacts:
   files:
-    - Frontend
+    - '**/*'
+  base-directory: 'Frontend'

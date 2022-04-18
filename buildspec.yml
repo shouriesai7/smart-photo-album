@@ -5,7 +5,13 @@ phases:
         python: 3.7
   build:
     commands:
+      - mkdir build-output
+      - cp -R Frontend/ build-output
+  post_build:
+    commands:
+      - mv build-output/**/* ./
+      - mv build-output/* ./
+      - rm -R build-output
 artifacts:
   files:
     - '**/*'
-  base-directory: 'Frontend/.'

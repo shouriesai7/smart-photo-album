@@ -50,9 +50,15 @@ def lambda_handler(event, context):
                 'Name' : objectKey
             }
         }
-
+        
+        s3Client=boto3.client('s3')
+        metadata = s3Client.head_object(Bucket=bucket, Key=objectKey)
+        custom_labels = metadata['ResponseMetadata']['HTTPHeaders']['x-amz-meta-customlabels'].split(',')
         response = rekognition.detect_labels(Image = image)
         labels = list(map(lambda x : x['Name'], response['Labels']))
+        for label in custom_labels:
+                labels.append(label.strip().title())
+        print(labels)
         #timestamp = datetime.now().strftime('%Y-%d-%mT%H:%M:%S')
         timestamp=str(int(time.time()))
         print("new time:", int(time.time()))

@@ -22,7 +22,7 @@
     </head>
     <center>
         <header class="photos_title">
-            Smart Photo Album - AWS
+            NLP Based Smart Photo Album using AWS
         </header>
     </center>
     <body>
@@ -34,7 +34,7 @@
                         <i class="large material-icons" id="mic_search" onclick="voiceSearch()">mic</i>
                     </button>
                 </form>
-                <p class="search_info">Click the microphone to start or stop recording.</p>
+                <p class="search_info">Click the microphone icon to start/stop recording.</p>
                 <div class="row">
                     <button type="button" id="searchPhotos" name="searchPhotos" style="width:100px; height: 25px;" onclick="textSearch()">Search</button>
                 </div>
@@ -42,13 +42,13 @@
         </div>
         <div id="photos_search_results"></div>
         <div class="Upload_files">
-            <h2 style="text-align: center;">Upload Photos</h2>
+            <h2 style="text-align: center;">Upload Images</h2>
             <center>
                 <form action="/action_page.php">
                     <input type="file" id="uploaded_file" name="filename">
                     <input type="text" id="custom_labels" name="custom_labels" placeholder="Custom labels">
                 </form>
-                <button id="upload_files" onclick="uploadPhoto()">Upload</button>
+                <button id="upload_files" style="width:100px; height: 25px;" onclick="uploadPhoto()">Upload</button>
             </center>
             <center><p id="uploadText" style="display:hidden; font-size: 20px;"></p></center>
         </div>

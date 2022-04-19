@@ -10,6 +10,7 @@ from opensearchpy import OpenSearch, RequestsHttpConnection
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
+#Niharika - SHourie Demo
 headers = { "Content-Type": "application/json" }
 host = 'search-photos-twu34m6xdkbq5z3ua6ss4ujtye.us-west-2.es.amazonaws.com'
 #testing
